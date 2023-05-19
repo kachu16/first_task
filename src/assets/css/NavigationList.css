@@ -1,0 +1,177 @@
+/* making the navigation list sticky */
+#inner_container_1 {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 11;
+  background: white;
+}
+/* conatiner for mobile */
+#mob_inner_container_1 {
+  display: none !important;
+}
+#content > div:first-child {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+}
+.naviagtion_list {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.naviagtion_list_item {
+  padding: 1rem 1rem;
+  color: #8a8a8a;
+  cursor: pointer;
+  text-decoration: none;
+}
+.active-item {
+  color: #000;
+  border-bottom: 1px solid black;
+}
+#content > div {
+  display: flex;
+  justify-content: space-between;
+}
+#writePostBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#writePostBtns button {
+  border: none;
+  border-style: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#writePostBtns button:nth-child(1) {
+  background-color: #edeef0;
+  color: #000;
+}
+#writePostBtns button:nth-child(2) {
+  background-color: #2f6ce5;
+  color: white;
+}
+#writePostBtns button:nth-child(2) img {
+  margin-right: 6px;
+}
+
+/* button for mobile screen */
+#leaveBtn ,#backBtn,#topNavBtn{
+  display: none;
+}
+/* join button for mobile screen */
+#mobJoinBtn {
+  display: none;
+}
+
+/* responsive css */
+
+@media screen and (max-width: 1440px) {
+  #content {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #content {
+    width: 85vw;
+  }
+  #writePostBtns button {
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  #writePostBtns button {
+    margin-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 838px) {
+  #writePostBtns button {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .naviagtion_list_item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  #inner_container_1 {
+    top: 2.84rem;
+  }
+  .naviagtion_list {
+    padding-left: 0;
+  }
+  .naviagtion_list_item {
+    padding: 0.5rem 0.25rem 0 0.5rem;
+  }
+  #writePostBtns button {
+    padding: 0.25rem 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 582px) {
+  #joinBtn {
+    display: none;
+  }
+  /* button for mobile screen */
+  #leaveBtn,#backBtn ,#mobJoinBtn{
+    display: block;
+  }
+  #inner_container_1 {
+    position: relative;
+    z-index: 0;
+    top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  #writePostBtn,
+  #logo,
+  #navSearch {
+    display: none;
+  }
+  #leaveBtn {
+    top: 2rem;
+  }
+  #leaveBtn {
+    top: 1rem;
+    right: 1rem;
+    margin-right: 0;
+  }
+  #topNavBtn{
+    display: block;
+  }
+
+  /*desktop navigation list  */
+  #inner_container_1 {
+    display: none !important;
+  }
+
+  #mob_inner_container_1 {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mob_post_count {
+    font-weight: 600;
+    margin-left: 1rem;
+    color: black;
+  }
+
+  .dropmenuBtn {
+    border: none;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #edeef0;
+    color: #000;
+  }
+}

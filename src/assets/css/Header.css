@@ -1,0 +1,269 @@
+#navbar {
+    display: flex;
+    max-height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  #logo {
+    width: 162.57px;
+    height: 24px;
+    margin-left: 2rem;
+  }
+  
+  #navSearch {
+    width: 360px;
+    height: 42px;
+    background: #f2f2f2;
+    border-radius: 21px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+  #navSearch img {
+   margin-left: 1rem;
+  }
+  #navSearch input {
+    width: 242px;
+    font-weight: 600;
+    height: 19px;
+    color: black;
+    background: #f2f2f2;
+    border: none;
+    outline: none;
+   margin-left: 1rem;
+  
+  }
+  #navSearch input::placeholder{
+    color: #5c5c5c;
+    font-size: 14px;
+  }
+  #loginStatus {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: #2e2e2e;
+  }
+  #loginStatus span {
+    color: #2f6ce5;
+    font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  }
+  
+  /* HOME PAGE IMAGE styling */
+#homePageImg{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: -1;
+    height: 30rem;
+    position: relative;
+    margin-top: 4.5rem;  /* giving margin because navbar is coming over it because the position of navbar is sticky   */
+}
+
+#homePageImg.blur{
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
+}
+
+ #homePageImg div:first-child{
+    background: url('../../static/homePageBg.png') no-repeat center center/cover;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    opacity: 0.5;
+    /* position: relative; */
+}
+
+#img-overflow-text{
+    position: absolute;
+    left: 20%;
+    top: 70%;
+    opacity: 1;
+    color: white;
+}
+#img-overflow-text>h1{
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+#img-overflow-text>p{
+    font-weight: 400;
+    font-size: 1.15rem;
+}
+  
+  /* responsive Part */
+  
+  @media screen and (max-width: 812px) {
+    #navSearch {
+      width: 254px;
+    }
+    #loginStatus {
+      margin-right: 0;
+    }
+  }
+  
+  @media screen and (max-width: 676px) {
+    #navSearch input {
+      width: 198px;
+      margin-left: 0.5rem;
+  }
+  #navSearch img {
+    margin-left: 0.7rem;
+  }
+  #logo {
+    width: 129.57px;
+    margin-right: 0.7rem;
+    margin-left: 0;
+  }
+  
+  }
+
+
+
+  /* responsive  css */
+
+  @media screen and (max-width: 1440px) {
+    #homePageImg {
+      height: 22rem;
+    }
+    #content {
+      width: 75vw;
+    }
+    .post_container {
+      width: 66%;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+      #homePageImg {    
+          height: 20rem;
+      }
+      #img-overflow-text>h1 {
+          font-size: 2rem;
+      }
+    }
+
+  
+    @media screen and (max-width: 676px) {
+      #backBtn{
+        top: 2rem;
+        }
+      #loginStatus{
+          display: none;
+      }
+      #homePageImg {
+          margin-top: 1.5rem;
+      }
+      #navbar{
+          padding: 0.1rem;
+      }
+      #logo{
+          margin-left: 1rem;
+          margin-right: 0;
+      }
+      #navSearch {
+          margin-right: 1rem;
+      }
+    }
+    
+    @media screen and (max-width: 582px) {
+    
+      header{
+          position: relative;
+      }
+      #img-overflow-text {
+          left: 7%;
+      }
+      #leaveBtn{
+          border: 1px solid white !important;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 4px;
+      display: block;
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      background-color: transparent;
+      color: white;
+      }
+      #backBtn{
+    cursor: pointer;
+    position: absolute;
+    top: 2.3rem;
+    left: 1rem;
+    }
+
+    #topNavBtn{
+      position: absolute;
+      top: 5px;right: 0;
+  
+    }
+      #mobJoinBtn{
+          position: fixed;
+          bottom: 2rem;
+          right: 5%;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 20rem;
+          padding: 1rem;
+          background-image: linear-gradient(to right, #FF5C5C , #F0568A);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+      }
+    }
+    @media screen and (max-width: 482px) {
+      #navSearch{
+        display: none;
+      }
+      #leaveBtn{
+          top: 2rem;
+      }
+      #img-overflow-text {
+          left: 3%;
+          top: 80%;
+      }
+      #img-overflow-text>h1 {
+          font-size: 1.5rem;
+      }
+      #leaveBtn{
+          top: 1rem;
+          right: 1rem;
+          margin-right: 0;
+      }
+  
+      .dropmenuBtn{    
+          border: none;
+          border-style: none;
+          padding: 0.5rem 1rem;
+          margin-right: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 4px;
+          background-color: #EDEEF0;
+          color: #000;
+      }
+      #backBtn{
+        top: 1.5rem;
+        }
+    }
+  
+    @media screen and (max-width: 482px) {
+      #img-overflow-text {
+          left: 3%;
+          top: 67%;
+      }
+    }
+    

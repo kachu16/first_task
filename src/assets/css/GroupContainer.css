@@ -1,0 +1,126 @@
+/*Styling for groups container   */
+
+#groups_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem 0 0 3rem;
+}
+/* #groups_container>*{
+    width: 100%;
+} */
+#groupFindInput{
+    margin-top: 1.5rem;
+    /* border-bottom: 0.4px solid #B8B8B8; */
+    position: relative;
+    display: flex;
+}
+
+#groupFindInput input{
+    border: none;
+    color: black;
+    /* width: 100%; */
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    outline: none;
+}
+#groupFindInput input::placeholder{
+    color: #808080;
+}
+
+#groupFindInput img:last-child{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+/* group searching description */
+#group_inp_des{
+    color: #808080;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+/* group chats styling */
+
+#groups{
+    margin-top: 3rem;
+}
+.groups_chat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 50%;
+    margin: 2rem 0;
+}
+
+.groups_chat span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.groups_chat span>*{
+    margin-right: 10px;
+}
+
+.follow_btn{
+    border-radius: 14px;
+    background-color: #EDEEF0;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.followed{
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* see more group link */
+#seemore_group{
+font-size: 12px;
+color: #2F6CE5;
+text-decoration: none;
+position: absolute;
+right: 0;
+}
+
+
+
+
+/* responsive css */
+
+
+    
+@media screen and (max-width: 1400px) {
+    #groups_container{
+        padding: 1rem 0 0 0rem;
+    }
+  }
+    @media screen and (max-width: 676px) {
+      #groups_container {
+          width: 31%;
+          padding: 1rem 0 0 0rem;
+      }
+      #groupFindInput{
+          margin-top: 1rem;
+      }
+      #groups_container {
+          width: 33%;
+      }
+    }
+  
+    @media screen and (max-width: 676px) {
+      #inner_container_2 {
+          grid-template-columns: 1fr;
+      }
+      #groups_container {
+          display: none;
+      }
+    }
+    
+    
+  
+   
+    

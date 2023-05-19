@@ -1,0 +1,12 @@
+  /* dropdown option will bhi hidden initially*/
+  .edit_option_list {
+    /* display: none; */
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.16);
+    z-index: 1;
+    right: 3rem;
+    background-color: white;    
+    border-radius: 4px;
+
+  }

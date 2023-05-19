@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+
+
+
+
+
+/* POST Container Styling */
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#content.blur{
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* making the group input and group chat sticky */
+#groups_container{
+    position: sticky;
+    top: 9rem;
+    z-index: 11;
+    background-color: white;
+    height: fit-content;
+    align-items: inherit;
+}
+
+
+
+#inner_container_2{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+/* POST container Styling */
+
+.post_container{
+    width: 60%;
+}
+#groups_container{
+    width: 25%;
+}
+
+/* POST cards styling */
+.post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    margin-top: 1rem;
+    border-radius: 10px
+}
+.post>img:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.post>div{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.post>div span{
+    padding: 0.7rem;
+}
+.post_type{
+    font-style: Medium;
+font-size: 18px;
+}
+
+.post>div span:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.post_title{
+font-size: 22px;
+font-style: bold;
+font-weight: 600;
+}
+
+
+/* edit dropdown Button */
+.post_edit_btn {
+    background-color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* edit dropdown Button on hover  */
+  .post_edit_btn:hover, .post_edit_btn:focus {
+    background-color: #BFBFC0;
+    border-radius: 4px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .post_edit {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* dropdown option will bhi hidden initially*/
+  .edit_option_list {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.16);
+    z-index: 1;
+    right: 3rem;
+    background-color: white;    
+    border-radius: 4px;
+
+  }
+  
+  /* Links inside the dropdown */
+  .edit_option_list a {
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* class for the dropdown menu we will add this class to the list using JS*/
+  .show {display:block;}
+
+
+.post_description{
+font-size: 19px;
+color: #5c5c5c;
+text-align: inherit;
+}
+.post_by_user{
+    display: flex;
+    justify-content: space-between;
+}
+.post_by_user span:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user_name{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.post_by_user span:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post_by_user span:nth-child(2)>img{
+    padding: 10px;
+    background-color: #EDEEF0;
+    border-radius: 2px;
+}
+
+/* second type of card dont have the description part it has some other details */
+
+.post_details{
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    align-items: center;
+}
+.postDate, .postLocation{
+    display: flex;
+    margin-right: 1rem;
+    width: 100%;
+     justify-content: flex-start !important;
+
+}
+.postLocation img{
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+/* website link in post card */
+.post_website_link{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    /* color: #E56135;
+    color: #02B875; */
+    font-weight: 600;
+    text-align: center;
+    border: 0.7px solid #A9AEB8;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    
+}
+
+
+/* responsive css */
+
+@media screen and (max-width: 1440px) {
+    #content {
+      width: 80vw;
+    }
+    .post_container {
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .post>div {
+        padding: 1rem;
+    }
+    .post>div span {
+        padding: 0.5rem;
+    }
+    #content {
+        width: 85vw;
+    }
+    .post_container {
+        width: 65%;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+ 
+    #groups_container {
+        width: 30%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    #content {
+      width: 90vw;
+    }
+    .post_container {
+      width: 66%;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    #content {
+        margin-top: 1rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    #groups_container {
+        display: none;
+    }
+    .post_container {
+    width: 100%;
+}
+#content {
+    width: 98vw;
+}
+  }
+    @media screen and (max-width: 676px) {
+     
+      #groups_container {
+          width: 31%;
+          padding: 1rem 0 0 0rem;
+      }
+      #groupFindInput{
+          margin-top: 1rem;
+      }
+      .post>div {
+          padding: 0.5rem;
+      }
+      #groups_container {
+          width: 33%;
+      }
+    }
+  
+    @media screen and (max-width: 685px) {
+      #inner_container_2 {
+          grid-template-columns: 1fr;
+      }
+      .post_container {
+          width: 98%;
+      }
+      
+    }
+    
+    
+  
+    
+  
+
+
